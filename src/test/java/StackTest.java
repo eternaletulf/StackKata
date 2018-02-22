@@ -10,4 +10,13 @@ public class StackTest {
 
         assertNotNull(stack);
     }
+
+    @Test
+    public void shouldBeAbleToCreateAnEmptyStackAndShouldBeEmpty(){
+        Stack stack = new Stack();
+
+        boolean result = stack.isEmpty();
+
+        assertTrue(result);
+    }
 }
