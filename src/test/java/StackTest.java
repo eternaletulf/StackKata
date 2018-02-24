@@ -92,4 +92,16 @@ public class StackTest {
 
         assertThat(result, is(7));
     }
+
+    @Test
+    public void whenTwoElementsArePushedAndThenOneIsPoppedIsEmptyShouldReturnFalse(){
+        Stack stack = new Stack();
+
+        stack.push(7);
+        stack.push(154);
+        stack.pop();
+        boolean result =  stack.isEmpty();
+
+        assertFalse(result);
+    }
 }

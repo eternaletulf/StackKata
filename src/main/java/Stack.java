@@ -5,7 +5,7 @@ public class Stack {
     int element;
 
     public boolean isEmpty() {
-        return isEmpty;
+        return size == 0;
     }
 
     public int size() {
