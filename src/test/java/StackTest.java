@@ -1,5 +1,7 @@
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 public class StackTest {
@@ -18,5 +20,24 @@ public class StackTest {
         boolean result = stack.isEmpty();
 
         assertTrue(result);
+    }
+
+    @Test
+    public void inANewStackSizeShouldBeZero(){
+        Stack stack = new Stack();
+
+        int result = stack.size();
+
+        assertThat(result, is(0));
+    }
+
+    @Test
+    public void inANewStackWhenOneIsPushedIsEmptyShouldReturnFalse(){
+        Stack stack = new Stack();
+
+        stack.push(1);
+        boolean result = stack.isEmpty();
+
+        assertFalse(result);
     }
 }
