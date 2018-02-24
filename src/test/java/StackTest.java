@@ -104,4 +104,29 @@ public class StackTest {
 
         assertFalse(result);
     }
+
+    @Test
+    public void whenOneAndTwoArePushedAndThenOneIsPoppedSizeShouldReturnOne(){
+        Stack stack = new Stack();
+
+        stack.push(7);
+        stack.push(154);
+        stack.pop();
+        int result =  stack.size();
+
+        assertThat(result, is(1));
+    }
+
+    @Test
+    public void whenOneAndTwoArePushedThenTwoAndOneArePopped() {
+        Stack stack = new Stack();
+
+        stack.push(7);
+        stack.push(154);
+        int second = stack.pop();
+        int first =  stack.pop();
+
+        assertThat(second, is(154));
+        assertThat(first, is(7));
+    }
 }

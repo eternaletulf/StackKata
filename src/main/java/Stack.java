@@ -1,23 +1,27 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class Stack {
 
-    private int size;
-    private int element;
+    private List<Integer> element;
+
+    public Stack() {
+        element = new LinkedList<>();
+    }
 
     public boolean isEmpty() {
-        return size == 0;
+        return element.isEmpty();
     }
 
     public int size() {
-        return size;
+        return element.size();
     }
 
-    public void push(int element) {
-        this.element = element;
-        size++;
+    public void push(int pushed) {
+        element.add(pushed);
     }
 
     public int pop() {
-        size--;
-        return element;
+        return element.remove(element.size() - 1);
     }
 }
