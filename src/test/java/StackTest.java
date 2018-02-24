@@ -50,4 +50,26 @@ public class StackTest {
 
         assertThat(result, is(1));
     }
+
+    @Test
+    public void inANewStackWhenOneIsPushedThenOneIsPoppedIsEmptyShouldReturnTrue(){
+        Stack stack = new Stack();
+
+        stack.push(1);
+        stack.pop();
+        boolean result = stack.isEmpty();
+
+        assertTrue(result);
+    }
+
+    @Test
+    public void inANewStackWhenOneIsPushedThenOneIsPoppedSizeShouldReturnZero(){
+        Stack stack = new Stack();
+
+        stack.push(1);
+        stack.pop();
+        int result = stack.size();
+
+        assertThat(result, is(0));
+    }
 }
