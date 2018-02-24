@@ -72,4 +72,24 @@ public class StackTest {
 
         assertThat(result, is(0));
     }
+
+    @Test
+    public void whenOneIsPushedThenCanBePoppedAndGetTheSameValue(){
+        Stack stack = new Stack();
+
+        stack.push(1);
+        int result =  stack.pop();
+
+        assertThat(result, is(1));
+    }
+
+    @Test
+    public void whenAnotherOneIsPushedThenCanBePoppedAndGetTheSameValue(){
+        Stack stack = new Stack();
+
+        stack.push(7);
+        int result =  stack.pop();
+
+        assertThat(result, is(7));
+    }
 }

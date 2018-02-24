@@ -2,6 +2,7 @@ public class Stack {
 
     boolean isEmpty = true;
     int size;
+    int element;
 
     public boolean isEmpty() {
         return isEmpty;
@@ -11,13 +12,15 @@ public class Stack {
         return size;
     }
 
-    public void push(int i) {
+    public void push(int element) {
+        this.element = element;
         isEmpty = false;
         size++;
     }
 
-    public void pop() {
+    public int pop() {
         isEmpty = true;
         size--;
+        return element;
     }
 }
