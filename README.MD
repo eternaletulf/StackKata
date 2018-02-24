@@ -2,7 +2,7 @@
 # stack-kata
 
 Esta Kata está inspirada en el trabajo presentado en:
- ["Specifics and Generics" publicada en el blog "The Clean Coder"]( http://thecleancoder.blogspot.com/2010/11/craftsman-63-specifics-and-generics.html )
+ ["Code Katas: The Stack" publicada en el blog de "Jack Reichert"]( https://www.jackreichert.com/2016/07/code-katas-stack/ )
 
 ## Requerimientos y Reglas 
 
